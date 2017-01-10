@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Output} from '@angular/core';
+import {EventEmitter} from "@angular/common/src/facade/async";
 
 @Component({
   selector: 'app-event-binding',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
   `
 })
 export class EventBindingComponent {
+  @Output('clickable')  clicked = new EventEmitter<string>();
+
   onClicked(){
-    alert("it worked");
+    this.clicked.emit("it works")
   }
 }
