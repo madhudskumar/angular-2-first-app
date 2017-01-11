@@ -9,14 +9,20 @@ import { Component, OnInit } from '@angular/core';
   `]
 })
 export class DirectivesComponent implements OnInit {
-  clicked = false;
-
+  private items;
+  private clicked;
+  private value;
   doClick(){
     this.clicked = !this.clicked;
   }
-  constructor() { }
+  constructor(  ) {
+
+  }
 
   ngOnInit() {
+    this.clicked = false;
+    this.items = [1, 2, 3, 4, 5, 6];
+    this.value = 124;
   }
 
 }
