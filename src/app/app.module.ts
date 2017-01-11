@@ -10,6 +10,7 @@ import { EventBindingComponent } from './databinding/event-binding.component';
 import { TwoWayBindingComponent } from './databinding/two-way-binding.component';
 import { LifecycleComponent } from './lifecycle.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { HighlightDirective } from './directives/highlight.directive';
 //import { OtherComponent, AnotherComponent } from "./other"
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DirectivesComponent } from './directives/directives.component';
     EventBindingComponent,
     TwoWayBindingComponent,
     LifecycleComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
