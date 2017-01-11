@@ -1,12 +1,17 @@
-import {Directive, ElementRef, Renderer, HostListener, HostBinding} from '@angular/core';
+import {Directive, ElementRef, Renderer, HostListener, HostBinding, Input , OnInit} from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
 })
-export class HighlightDirective {
-  private backgroundColor = 'white';
+export class HighlightDirective implements OnInit{
+  @Input() defaultColor = 'white';
+  @Input('appHighlight') hilightColor = 'green';
+  private backgroundColor;
   @HostListener('mouseenter') mouseover() {
-    this.backgroundColor = "green";
+    this.backgroundColor = this.hilightColor;
+  };
+  @HostListener('mouseleave') mouseleave() {
+    this.backgroundColor = this.defaultColor;
   };
   @HostBinding('style.backgroundColor') get setColor() {
     return this.backgroundColor;
@@ -16,4 +21,7 @@ export class HighlightDirective {
     // this.rendrer.setElementStyle(this.elementRef.nativeElement, "background-color", "green");
   }
 
+  ngOnInit(){
+    this.backgroundColor = this.defaultColor;
+  }
 }

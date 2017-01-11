@@ -12,6 +12,11 @@
 </div>
 <hr>
 <h2>custom attribute directive</h2>
-<div appHighlight>
+<div [appHighlight]="'red'" [defaultColor]="'pink'">
   bla bla bla ba
 </div>
+<hr>
+<h1>structural directives</h1>
+<h2>*ngIf</h2>
+<div *ngIf="clicked">condition text</div>
+<button (click)="doClick()">click me me me!</button>
