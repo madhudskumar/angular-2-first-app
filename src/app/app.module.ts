@@ -11,6 +11,7 @@ import { TwoWayBindingComponent } from './databinding/two-way-binding.component'
 import { LifecycleComponent } from './lifecycle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 //import { OtherComponent, AnotherComponent } from "./other"
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     TwoWayBindingComponent,
     LifecycleComponent,
     DirectivesComponent,
-    HighlightDirective
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
