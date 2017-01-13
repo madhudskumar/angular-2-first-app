@@ -22,7 +22,7 @@ import {DataService} from "./data.service";
         <p>{{value}}</p>
     </div>
   `,
-  providers: [LogService, DataService]
+  providers: [LogService]
 })
 export class CmpAComponent implements OnInit {
   value = '';
@@ -37,11 +37,11 @@ export class CmpAComponent implements OnInit {
   }
 
   onStore(value: string) {
-
+    this.dataService.addData(value);
   }
 
   onGet() {
-
+    this.items =  this.dataService.getData();
   }
 
   onSend(value: string) {
