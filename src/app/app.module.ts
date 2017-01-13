@@ -12,6 +12,9 @@ import { LifecycleComponent } from './lifecycle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
+import { ServiceComponent } from './service/service.component';
+import { CmpAComponent } from './service/cmp-a.component';
+import { CmpBComponent } from './service/cmp-b.component';
 //import { OtherComponent, AnotherComponent } from "./other"
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { UnlessDirective } from './directives/unless.directive';
     LifecycleComponent,
     DirectivesComponent,
     HighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    ServiceComponent,
+    CmpAComponent,
+    CmpBComponent
   ],
   imports: [
     BrowserModule,
