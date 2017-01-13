@@ -15,7 +15,7 @@ import { UnlessDirective } from './directives/unless.directive';
 import { ServiceComponent } from './service/service.component';
 import { CmpAComponent } from './service/cmp-a.component';
 import { CmpBComponent } from './service/cmp-b.component';
-//import { OtherComponent, AnotherComponent } from "./other"
+
 @NgModule({
   declarations: [
     AppComponent,

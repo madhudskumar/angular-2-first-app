@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {LogService} from "./log.service";
+import {DataService} from "./data.service";
 
 @Component({
   selector: 'app-cmp-a',
@@ -20,14 +22,18 @@ import { Component, OnInit } from '@angular/core';
         <p>{{value}}</p>
     </div>
   `,
-  styles: []
+  providers: [LogService, DataService]
 })
 export class CmpAComponent implements OnInit {
   value = '';
   items: string[] = [];
 
-  onLog(value: string) {
+  constructor(private logService:LogService, private dataService:DataService) {
 
+  }
+
+  onLog(value: string) {
+    this.logService.writeToLog(value);
   }
 
   onStore(value: string) {
