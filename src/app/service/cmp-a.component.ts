@@ -22,7 +22,6 @@ import {DataService} from "./data.service";
         <p>{{value}}</p>
     </div>
   `,
-  providers: [LogService]
 })
 export class CmpAComponent implements OnInit {
   value = '';
@@ -45,7 +44,7 @@ export class CmpAComponent implements OnInit {
   }
 
   onSend(value: string) {
-
+    this.dataService.pushData(value);
   }
 
   ngOnInit(){

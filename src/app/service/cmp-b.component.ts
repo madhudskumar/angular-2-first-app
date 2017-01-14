@@ -21,7 +21,6 @@ import {DataService} from "./data.service";
         <p>{{value}}</p>
     </div>
   `,
-  providers: [LogService]
 })
 export class CmpBComponent implements OnInit {
   value = '';
@@ -42,6 +41,8 @@ export class CmpBComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.dataService.pushDataEmitter.subscribe(
+      data => this.value = data
+    )
   }
 }
