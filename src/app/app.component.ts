@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>Root componet</h1>
-    <app-template-driven></app-template-driven>
+    <div class="container container-fluid">
+      <app-template-driven></app-template-driven>
+    </div>
   `,
 })
 export class AppComponent{
