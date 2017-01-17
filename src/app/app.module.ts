@@ -16,6 +16,7 @@ import { ServiceComponent } from './service/service.component';
 import { CmpAComponent } from './service/cmp-a.component';
 import { CmpBComponent } from './service/cmp-b.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
+import { DataDrivenComponent } from './forms/data-driven/data-driven.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TemplateDrivenComponent } from './forms/template-driven/template-driven
     ServiceComponent,
     CmpAComponent,
     CmpBComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    DataDrivenComponent
   ],
   imports: [
     BrowserModule,
