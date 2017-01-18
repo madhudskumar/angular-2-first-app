@@ -14,8 +14,14 @@ export class TemplateDrivenComponent implements OnInit {
   user = {
     username:'madhu',
     email:'m@1.c',
-    password:'asdad'
+    password:'asdad',
+    gender:'male'
   }
+
+  gender = [
+    'male',
+    'female'
+  ]
 
   onSubmit(form:NgForm){
     console.log(form.value);
