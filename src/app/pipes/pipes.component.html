@@ -2,5 +2,9 @@
   <h2>Built in templates</h2>
   {{text | lowercase}} <br>
   {{date | date:"hh:mm:ss"}} <br>
-  {{text | slice:2:5 | uppercase}}
+  {{text | slice:2:5 | uppercase}} <br>
+
+  <h2>custom pipe</h2>
+  <input type="number" name="custom" id="12" #doubleNUmber (keyup)="0">
+  {{doubleNUmber.value | doublePipe}}
 </h1>

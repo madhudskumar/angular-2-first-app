@@ -19,6 +19,7 @@ import { TemplateDrivenComponent } from './forms/template-driven/template-driven
 import { DataDrivenComponent } from './forms/data-driven/data-driven.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { DoublePipePipe } from './pipes/double-pipe.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { DoublePipePipe } from './pipes/double-pipe.pipe';
     TemplateDrivenComponent,
     DataDrivenComponent,
     PipesComponent,
-    DoublePipePipe
+    DoublePipePipe,
+    FilterPipe
   ],
   imports: [
     ReactiveFormsModule,
