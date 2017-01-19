@@ -17,6 +17,7 @@ import { CmpAComponent } from './service/cmp-a.component';
 import { CmpBComponent } from './service/cmp-b.component';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { DataDrivenComponent } from './forms/data-driven/data-driven.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DataDrivenComponent } from './forms/data-driven/data-driven.component';
     CmpAComponent,
     CmpBComponent,
     TemplateDrivenComponent,
-    DataDrivenComponent
+    DataDrivenComponent,
+    PipesComponent
   ],
   imports: [
     ReactiveFormsModule,
