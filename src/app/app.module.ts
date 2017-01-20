@@ -20,6 +20,7 @@ import { DataDrivenComponent } from './forms/data-driven/data-driven.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { DoublePipePipe } from './pipes/double-pipe.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     DataDrivenComponent,
     PipesComponent,
     DoublePipePipe,
-    FilterPipe
+    FilterPipe,
+    HttpComponent
   ],
   imports: [
     ReactiveFormsModule,

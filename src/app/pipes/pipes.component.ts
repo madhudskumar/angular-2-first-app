@@ -9,6 +9,7 @@ export class PipesComponent implements OnInit {
   text = "hello therre"
   date = new Date();
 
+  items = ['aaskdasd', 'madhu' , 'slakjdmad', 'asdkjlasd'];
   constructor() { }
 
   ngOnInit() {

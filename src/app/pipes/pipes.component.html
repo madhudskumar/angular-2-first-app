@@ -7,4 +7,9 @@
   <h2>custom pipe</h2>
   <input type="number" name="custom" id="12" #doubleNUmber (keyup)="0">
   {{doubleNUmber.value | doublePipe}}
+
+  <h2>filter pipe</h2>
+  <ul>
+    <li *ngFor="let item of items | filter:'mad'">{{item}}</li>
+  </ul>
 </h1>
