@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="container container-fluid">
-      <app-pipes></app-pipes>
+      <app-http></app-http>
     </div>
   `,
 })
