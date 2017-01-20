@@ -1,3 +1,21 @@
+<h1 class="container-fluid">
+  {{title}}
+</h1>
+
+<h1>
+  <input type="text" placeholder="UserName" #username>
+  <input type="text" placeholder="Email" #email>
+  <button type="submit" (click)="onSubmit(username.value, email.value)">submit</button>
+</h1>
+
+<hr>
+<button (click)="onGetData()">get data</button>
+<h1>
+  <ul>
+    <li *ngFor="let item of data">{{item}}</li>
+  </ul>
+</h1>
+
 <p>
-  http works!
+  {{asyncStr | async}}
 </p>
