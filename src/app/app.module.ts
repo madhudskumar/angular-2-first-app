@@ -27,6 +27,9 @@ import { UnprotectedComponent } from './auth/unprotected/unprotected.component';
 import { HeaderComponent } from './auth/shared/header.component';
 import { SigninComponent } from './auth/unprotected/signin.component';
 import { SignupComponent } from './auth/unprotected/signup.component';
+import {APP_ROUTES_MODULE} from "./app.routes";
+import {AuthSerice} from "./auth/shared/auth.service";
+import {AuthGuard} from "./auth/shared/auth.guard";
 
 @NgModule({
   declarations: [
@@ -59,9 +62,10 @@ import { SignupComponent } from './auth/unprotected/signup.component';
     ReactiveFormsModule,
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    APP_ROUTES_MODULE
   ],
-  providers: [],
+  providers: [AuthSerice, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
