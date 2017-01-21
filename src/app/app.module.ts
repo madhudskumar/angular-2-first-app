@@ -21,6 +21,12 @@ import { PipesComponent } from './pipes/pipes.component';
 import { DoublePipePipe } from './pipes/double-pipe.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HttpComponent } from './http/http.component';
+import { ProtectedComponent } from './auth/protected/protected.component';
+import { SharedComponent } from './auth/shared/shared.component';
+import { UnprotectedComponent } from './auth/unprotected/unprotected.component';
+import { HeaderComponent } from './auth/shared/header.component';
+import { SigninComponent } from './auth/unprotected/signin.component';
+import { SignupComponent } from './auth/unprotected/signup.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,13 @@ import { HttpComponent } from './http/http.component';
     PipesComponent,
     DoublePipePipe,
     FilterPipe,
-    HttpComponent
+    HttpComponent,
+    ProtectedComponent,
+    SharedComponent,
+    UnprotectedComponent,
+    HeaderComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     ReactiveFormsModule,
