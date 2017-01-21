@@ -1,10 +1,16 @@
 import {Injectable} from "@angular/core";
 import {User} from "./user.interface";
+import {Router} from "@angular/router";
 
 declare var firebase:any;
 
 @Injectable()
 export class AuthSerice {
+
+  constructor(
+    private router:Router
+  ){}
+
   signUpUser(user:User){
     firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
       .catch(function(error) {
@@ -27,5 +33,6 @@ export class AuthSerice {
 
   logOut(){
     firebase.auth().signOut();
+    this.router.navigate(["/signIn"]);
   }
 }
